@@ -1,8 +1,9 @@
+generate_pdf <- function() {
 
-install.packages("pak")
-pak::pak('rstudio/pagedown')
+  return(pagedown::chrome_print(
+    input = "test.Rmd",
+    output = "test.pdf"
+  ))
 
-pagedown::chrome_print(
-  input = "test.Rmd",
-  output = "test.pdf"
-)
+}
+
